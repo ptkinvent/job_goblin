@@ -14,6 +14,7 @@ import {
   ChevronUpDownIcon,
   MoonIcon,
   XMarkIcon,
+  DocumentTextIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
@@ -21,7 +22,10 @@ export default function MultiColumnLayout({ currentTab, children }) {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const navigation = [{ name: "Dashboard", href: "/dashboard", icon: HomeIcon, current: currentTab === "dashboard" }];
+  const navigation = [
+    { name: "Dashboard", href: "/dashboard", icon: HomeIcon, current: currentTab === "dashboard" },
+    { name: "Resumes", href: "/resumes", icon: DocumentTextIcon, current: currentTab === "resumes" },
+  ];
 
   return (
     <>
