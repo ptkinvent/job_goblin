@@ -158,7 +158,7 @@ export default function ResumesPage() {
         <div className="flex flex-col gap-6">
           <div>
             <Heading>Resumes</Heading>
-            <Text>Upload your resume as a .pdf or .docx file.</Text>
+            <Text>Upload your resume as a .docx file.</Text>
           </div>
 
           <form
@@ -168,13 +168,13 @@ export default function ResumesPage() {
             <div className="flex flex-col gap-4">
               <div>
                 <Subheading>Upload Resume</Subheading>
-                <Text className="mt-1">Accepted formats: PDF and DOCX up to 10MB.</Text>
+                <Text className="mt-1">Accepted formats: DOCX up to 10MB.</Text>
               </div>
 
               <Input
                 id="resume-upload"
                 type="file"
-                accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 onChange={(e) => setFile(e.target.files?.[0] || null)}
               />
 
